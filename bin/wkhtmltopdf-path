@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+NO_WICKEDPDF_PATH = true
+require 'wkhtmltopdf-binary'
+
+puts WkHtmlToPdfBinary.binary_path
