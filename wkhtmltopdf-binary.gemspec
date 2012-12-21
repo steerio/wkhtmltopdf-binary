@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'rubygems/package_task'
 
-spec = Gem::Specification.new do |s| 
+Gem::Specification.new do |s| 
   s.name = "wkhtmltopdf-binary"
   s.version = "0.10"
   s.author = "Research Information Systems, The University of Iowa"
@@ -17,10 +17,8 @@ spec = Gem::Specification.new do |s|
   s.has_rdoc = false
   s.rdoc_options += ['-x', 'libexec/.*']
   s.executables << "wkhtmltopdf" << 'wkhtmltopdf-path'
-end
 
-Gem::PackageTask.new(spec) do |pkg|
-  pkg.need_tar = true
+  Gem::PackageTask.new(s) do |pkg|
+    pkg.need_tar = true
+  end
 end
-
-spec
