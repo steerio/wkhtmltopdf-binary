@@ -5,6 +5,8 @@ arch = case RUBY_PLATFORM
     'linux-amd64'
   when /linux/
     'linux-x86'
+  when /64.*darwin/
+    'darwin-x86_64'
   when /darwin/
     'darwin-x86'
   else
